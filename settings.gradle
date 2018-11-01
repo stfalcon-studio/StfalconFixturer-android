@@ -1,1 +1,1 @@
-include ':sample', ':stfalcon-fixturer'
+include ':sample', ':stfalconfixturer'
