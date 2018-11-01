@@ -13,16 +13,6 @@ Download via Gradle:
 compile 'CHANGE IT'
 ```
 
-or Maven:
-```xml
-<dependency>
-  <groupId>CHANGE IT</groupId>
-  <artifactId>CHANGE IT</artifactId>
-  <version>CHANGE IT</version>
-  <type>pom</type>
-</dependency>
-```
-
 ### Usage
 
 Create xml file in raw directory of app resources. 
