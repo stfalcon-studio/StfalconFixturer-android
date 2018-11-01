@@ -1,9 +1,7 @@
 # Stfalcon Fixturer
 
-![alt tag](https://i.imgur.com/KoeGW7E.gif)
-
 Utility for developers and QAs what helps minimize time wasting on writing the same data for testing over and over again. 
-You can write fixture in XML one time and use it for build testing. The library can autofill EditText with you fixture data.
+You can write fixture in XML one time and use it for build testing. The library can autofill EditText with your fixture data.
 
 ### Who we are
 Need iOS and Android apps, MVP development or prototyping? Contact us via info@stfalcon.com. We develop software since 2009, and we're known experts in this field. Check out our [portfolio](https://stfalcon.com/en/portfolio) and see more libraries from [stfalcon-studio](https://stfalcon-studio.github.io/).
@@ -13,16 +11,6 @@ Need iOS and Android apps, MVP development or prototyping? Contact us via info@s
 Download via Gradle:
 ```gradle
 compile 'CHANGE IT'
-```
-
-or Maven:
-```xml
-<dependency>
-  <groupId>CHANGE IT</groupId>
-  <artifactId>CHANGE IT</artifactId>
-  <version>CHANGE IT</version>
-  <type>pom</type>
-</dependency>
 ```
 
 ### Usage
@@ -84,6 +72,8 @@ Where `loginEmailEt` is EditText and "email" is tag of the fixture.
 
 Run your application and look on magic :) You can call fixtures dialog by triple tap on bound to fixture EditText.
 
+![alt tag](https://i.imgur.com/KoeGW7E.gif)
+
 Take a look at the [sample project](sample) for more information
 
 ### License 
@@ -103,6 +93,5 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
 
 [sample]: <https://github.com/stfalcon-studio/StfalconFixturer-android/tree/master/sample>
