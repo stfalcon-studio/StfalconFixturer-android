@@ -1,5 +1,7 @@
 # Stfalcon Fixturer
 
+![alt tag](https://i.imgur.com/KoeGW7E.gif)
+
 Utility for developers and QAs what helps minimize time wasting on writing the same data for testing over and over again. 
 You can write fixture in XML one time and use it for build testing. The library can autofill EditText with you fixture data.
 
@@ -103,4 +105,4 @@ limitations under the License.
 ```
 
 
-[sample]: <Change it>
+[sample]: <https://github.com/stfalcon-studio/StfalconFixturer-android/tree/master/sample>
