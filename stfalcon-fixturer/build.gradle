@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+publish {
+    groupId = 'com.github.stfalcon'
+    artifactId = 'stfalcon-fixturer'
+    publishVersion = '0.1.0'
+    desc = 'Utility for developers and QAs what helps minimize time wasting on writing the same data for testing over and over again. \n' +
+            'You can write fixture in XML one time and use it for build testing. The library can autofill EditText with you fixture data.'
+    licences = ['Apache-2.0']
+    uploadName='Stfalcon Fixturer'
+    website = 'https://github.com/stfalcon-studio/StfalconFixturer-android.git'
+    userOrg = 'stfalcon.com'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api 'com.android.support:appcompat-v7:28.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+repositories {
+    mavenCentral()
+}

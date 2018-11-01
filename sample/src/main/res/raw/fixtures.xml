@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fixtures>
+    <fixture tag="email" group="account">
+        <item>user1@user.com</item>
+        <item>user2@user.com</item>
+        <item>test@test.com</item>
+    </fixture>
+    <fixture tag="password" group="account">
+        <item>qwerty123</item>
+        <item>qwertyQWE</item>
+        <item>11111111</item>
+    </fixture>
+    <fixture tag="name">
+        <item>John</item>
+        <item>Julia</item>
+        <item>Bobby</item>
+    </fixture>
+    <fixture tag="address">
+        <item>108 Greenwich Street, 4/F</item>
+        <item>156 William Street</item>
+        <item>Proskurivska Street, 11</item>
+    </fixture>
+</fixtures>
