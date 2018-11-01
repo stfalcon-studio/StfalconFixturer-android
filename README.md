@@ -1,7 +1,7 @@
 # Stfalcon Fixturer
 
 Utility for developers and QAs what helps minimize time wasting on writing the same data for testing over and over again. 
-You can write fixture in XML one time and use it for build testing. The library can autofill EditText with you fixture data.
+You can write fixture in XML one time and use it for build testing. The library can autofill EditText with your fixture data.
 
 ### Who we are
 Need iOS and Android apps, MVP development or prototyping? Contact us via info@stfalcon.com. We develop software since 2009, and we're known experts in this field. Check out our [portfolio](https://stfalcon.com/en/portfolio) and see more libraries from [stfalcon-studio](https://stfalcon-studio.github.io/).
