@@ -60,6 +60,7 @@ Second - resource ID of you fixtures XML file.
 The default behaviour is Fixturer works only for debug builds. But if you want to change this behaviour you can pass Boolean flag as third parameter.
 
 After that you can bind your EditTexts to the fixtures in your activity(fragment) classes.
+
 Kotlin: 
 ```kotlin
 loginEmailEt.setFixtureTag("email")
