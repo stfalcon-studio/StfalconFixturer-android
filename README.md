@@ -10,7 +10,7 @@ Need iOS and Android apps, MVP development or prototyping? Contact us via info@s
 
 Download via Gradle:
 ```gradle
-compile 'CHANGE IT'
+compile 'com.github.stfalcon:stfalcon-fixturer:0.1.0'
 ```
 
 ### Usage

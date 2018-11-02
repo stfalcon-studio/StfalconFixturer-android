@@ -30,9 +30,9 @@ publish {
     desc = 'Utility for developers and QAs what helps minimize time wasting on writing the same data for testing over and over again. \n' +
             'You can write fixture in XML one time and use it for build testing. The library can autofill EditText with you fixture data.'
     licences = ['Apache-2.0']
-    uploadName='Stfalcon Fixturer'
+    uploadName='StfalconFixturer'
     website = 'https://github.com/stfalcon-studio/StfalconFixturer-android.git'
-    userOrg = 'stfalcon.com'
+    userOrg = 'bevzaanton'
 }
 
 dependencies {
@@ -47,4 +47,15 @@ dependencies {
 }
 repositories {
     mavenCentral()
+}
+
+// Avoid Kotlin docs error
+tasks.withType(Javadoc) {
+    enabled = false
+}
+
+// Remove javadoc related tasks
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 }
