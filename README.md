@@ -73,8 +73,9 @@ Where `loginEmailEt` is EditText and "email" is tag of the fixture.
 
 Run your application and look on magic :) You can call fixtures dialog by triple tap on bound to fixture EditText.
 
-![](https://i.imgur.com/IYbM8VI.gif | width=300)
-![](https://i.imgur.com/c8rrdER.gif | width=300)
+![](https://i.imgur.com/zrdQYM2.gif)
+
+![](https://i.imgur.com/cl6FDA6.gif)
 
 Take a look at the [sample project](sample) for more information
 
