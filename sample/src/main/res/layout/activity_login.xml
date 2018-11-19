@@ -1,30 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/loginContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:context=".LoginActivity">
+        android:layout_height="280dp"
+        android:layout_margin="36dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-            android:id="@+id/loginEmailEt"
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/email"/>
+            android:layout_height="match_parent"
+            android:padding="16dp">
 
-    <EditText
-            android:id="@+id/loginPasswordEt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/password"/>
+            <TextView
+                android:id="@+id/loginTitle"
+                style="@style/HeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:text="@string/log_in"
+                android:textColor="@color/soft_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-            android:id="@+id/loginBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/loginEmailIl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/email"
+                app:hintTextAppearance="@style/MyHintText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginTitle">
 
-</LinearLayout>
+                <EditText
+                    android:id="@+id/loginEmailEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/loginPasswordIl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                app:hintTextAppearance="@style/MyHintText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginEmailIl"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/loginPasswordEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:theme="@style/MyEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginEmailEt" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_rounded"
+                android:text="@string/log_in"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginPasswordIl" />
+
+            <TextView
+                android:id="@+id/loginSignUp"
+                style="@style/MessageText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sign_up"
+                android:textColor="@color/soft_blue_dark"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--Decor-->
+
+    <View
+        android:id="@+id/circle4"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/circle"
+        app:layout_constraintBottom_toTopOf="@+id/circle3"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/circle3"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/circle"
+        app:layout_constraintLeft_toLeftOf="@+id/loginContainer"
+        app:layout_constraintTop_toTopOf="@+id/loginContainer" />
+
+    <View
+        android:id="@+id/circle2"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/circles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/circle1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/circles"
+        app:layout_constraintBottom_toTopOf="@+id/circle3"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
