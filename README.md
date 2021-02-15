@@ -8,10 +8,25 @@ Need iOS and Android apps, MVP development or prototyping? Contact us via info@s
 
 ### Download
 
-Download via Gradle:
-```gradle
-compile 'com.github.stfalcon:stfalcon-fixturer:0.1.0'
+1. Add jitpack to the root build.gradle file of your project at the end of repositories.
 ```
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+```
+2. Add the dependency
+```
+dependencies {
+  ...
+  implementation "com.github.stfalcon-studio:StfalconFixturer-android:[last_version]"
+}  
+```
+[![](https://jitpack.io/v/stfalcon-studio/StfalconFixturer-android.svg)](https://jitpack.io/#stfalcon-studio/StfalconFixturer-android)
+
+Where the `latest_version` is the value from JitPack.io.
 
 ### Usage
 
