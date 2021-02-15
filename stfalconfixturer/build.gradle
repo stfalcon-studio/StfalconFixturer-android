@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 28
@@ -9,7 +9,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -21,18 +21,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
 
-publish {
-    groupId = 'com.github.stfalcon'
-    artifactId = 'stfalcon-fixturer'
-    publishVersion = '0.1.0'
-    desc = 'Utility for developers and QAs what helps minimize time wasting on writing the same data for testing over and over again. \n' +
-            'You can write fixture in XML one time and use it for build testing. The library can autofill EditText with you fixture data.'
-    licences = ['Apache-2.0']
-    uploadName='StfalconFixturer'
-    website = 'https://github.com/stfalcon-studio/StfalconFixturer-android.git'
-    userOrg = 'bevzaanton'
+    afterEvaluate {
+        publishing {
+            publications {
+                // Creates a Maven publication called "release".
+                release(MavenPublication) {
+                    // Applies the component for the release build variant.
+                    from components.release
+
+                    // You can then customize attributes of the publication as shown below.
+                    groupId = 'com.github.stfalcon'
+                    artifactId = 'stfalcon-fixturer'
+                    version = '0.1'
+                }
+            }
+        }
+    }
 }
 
 dependencies {
